@@ -1,33 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+
 const Stack = createStackNavigator();
 
-import visPrincipal from './vistas/visPrincipal';
-import visCrearUsuario from './vistas/visCrearUsuario';
-import visDetalleUsuario from './vistas/visDetalleUsuario';
-import vistListaUsuario from './vistas/vistListaUsuario';
-import visDistribucion from './vistas/visDistribucion';
+import MenuPrincipal from './vistas/MenuPrincipal';
+import VisCrearUsuario from './vistas/VisCrearUsuario';
+import VisDetalleUsuario from './vistas/VisDetalleUsuario';
+import VisListaUsuario from './vistas/VisListaUsuario';
 
 
 function MyStack(){
     return (
         <Stack.Navigator>
-            <Stack.Screen name='vistListaUsuario' component={vistListaUsuario} options={{title:'App Maximo'}} />
-            <Stack.Screen name='visDistribucion' component={visDistribucion} options={{title:'App Maximo'}} />
-            <Stack.Screen name='visPrincipal' component={visPrincipal} options={{title:'App Maximo'}} />
-            <Stack.Screen name='visCrearUsuario' component={visCrearUsuario} options={{title:'App Maximo'}} />
-            <Stack.Screen name='visDetalleUsuario' component={visDetalleUsuario} options={{title:'App Maximo'}} />
+            <Stack.Screen name='VisCrearUsuario' component={VisCrearUsuario} options={{title:'App GH Angelo'}} />
+            <Stack.Screen name='MenuPrincipal' component={MenuPrincipal} options={{title:'App GH Angelo'}} />
+            <Stack.Screen name='VisListaUsuario' component={VisListaUsuario} options={{title:'App GH Angelo'}} />
+            <Stack.Screen name='VisDetalleUsuario' component={VisDetalleUsuario} options={{title:'App GH Angelo'}} />
+            
         </Stack.Navigator>
     );
 }
 
-function App(){
+export default function App(){
     return(
         <NavigationContainer> 
-            <MyStack></MyStack> 
+            <MyStack/> 
         </NavigationContainer>
     );
 }
@@ -41,4 +40,3 @@ const styles=StyleSheet.create({
     }
 });
 
-export default App;
